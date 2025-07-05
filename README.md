@@ -20,7 +20,7 @@ Tampilan Hapus Praktikum
 ![image](https://github.com/user-attachments/assets/be757e14-1434-4735-90af-8410d1701980)
 
 Tampilan Managemnet Modul
-![image](https://github.com/user-attachments/assets/4a1654e2-8afd-4c72-9050-e2994ad0901f)
+![image](https://github.com/user-attachments/assets/310c68d7-b0d9-47d2-aa8d-cf5feeeb2724)
 
 Tampilan Tambah Modul
 ![image](https://github.com/user-attachments/assets/59ebaf6f-a249-4ac6-9bf5-2a4bb7d42b0f)
