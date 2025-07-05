@@ -4,8 +4,8 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Cek jika pengguna belum login
-if (!isset($_SESSION['user_id'])) {
+// Cek jika pengguna belum login atau bukan mahasiswa
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'mahasiswa') {
     header("Location: ../login.php");
     exit();
 }
@@ -15,42 +15,40 @@ if (!isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <title>Panel Mahasiswa - <?php echo $pageTitle ?? 'Dashboard'; ?></title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-pink-50 font-sans">
 
-    <nav class="bg-blue-600 shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="bg-pink-100 shadow-md sticky top-0 z-50 border-b border-pink-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <span class="text-white text-2xl font-bold">SIMPRAK</span>
+                        <span class="text-2xl font-bold text-purple-600">SIMPRAK</span>
                     </div>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
                             <?php 
-                                $activeClass = 'bg-blue-700 text-white';
-                                $inactiveClass = 'text-gray-200 hover:bg-blue-700 hover:text-white';
+                                $activeClass = 'text-purple-700 font-semibold border-b-2 border-purple-500';
+                                $inactiveClass = 'text-gray-600 hover:text-purple-600';
                             ?>
-                            <a href="dashboard.php" class="<?php echo ($activePage == 'dashboard') ? $activeClass : $inactiveClass; ?> px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
-                            <a href="my_courses.php" class="<?php echo ($activePage == 'my_courses') ? $activeClass : $inactiveClass; ?> px-3 py-2 rounded-md text-sm font-medium">Praktikum Saya</a>
-                            <a href="courses.php" class="<?php echo ($activePage == 'courses') ? $activeClass : $inactiveClass; ?> px-3 py-2 rounded-md text-sm font-medium">Cari Praktikum</a>
+                            <a href="dashboard.php" class="<?php echo ($activePage == 'dashboard') ? $activeClass : $inactiveClass; ?> px-3 py-2 text-sm font-medium">Dashboard</a>
+                            <a href="my_courses.php" class="<?php echo ($activePage == 'my_courses') ? $activeClass : $inactiveClass; ?> px-3 py-2 text-sm font-medium">Praktikum Saya</a>
+                            <a href="../katalog_praktikum.php" class="<?php echo ($activePage == 'katalog') ? $activeClass : $inactiveClass; ?> px-3 py-2 text-sm font-medium">Cari Praktikum</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="hidden md:block">
                     <div class="ml-4 flex items-center md:ml-6">
-                        <a href="../logout.php" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-md transition-colors duration-300">
+                        <a href="../logout.php" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">
                             Logout
                         </a>
                     </div>
                 </div>
 
-                </div>
+            </div>
         </div>
     </nav>
 
