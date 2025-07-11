@@ -1,3 +1,23 @@
+# Website Sistem Pengumpulan Tugas (Proyek UAS Pemrograman Web)
+
+Proyek ini adalah implementasi sederhana dari sistem pengumpulan tugas berbasis web, dikembangkan sebagai bagian dari tugas Ujian Akhir Semester (UAS) mata kuliah Pemrograman Web. Tujuannya adalah untuk memfasilitasi pengumpulan tugas secara digital dan memungkinkan pengelolaan data oleh pihak terkait (misalnya, asisten atau dosen).
+
+## Fitur Utama
+
+* **Antarmuka Pengguna:** Tampilan halaman yang terpisah untuk asisten dan mahasiswa, disesuaikan dengan kebutuhan masing-masing peran.
+* **Pengumpulan Tugas:** Mahasiswa dapat mengunggah tugas mereka melalui antarmuka web.
+* **Manajemen Tugas:** Asisten atau admin dapat melihat dan mengelola daftar tugas yang masuk.
+* **Database Relasional:** Struktur database dirancang untuk menyimpan informasi tugas, mahasiswa, dan asisten secara terorganisir.
+* **Halaman Dinamis:** Penggunaan PHP untuk membuat halaman web yang dinamis, berinteraksi dengan database untuk menampilkan dan memproses data.
+
+## Teknologi yang Digunakan
+
+* **Frontend:** HTML, CSS
+* **Backend:** PHP
+* **Database:** MySQL
+* **Lingkungan Pengembangan:** XAMPP (atau server web lainnya yang mendukung PHP dan MySQL)
+
+
 Tampilan Register
 ![image](https://github.com/user-attachments/assets/bdabef80-b1c9-4960-90e9-ce86ce916335)
 
